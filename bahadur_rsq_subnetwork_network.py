@@ -30,11 +30,11 @@ def get_shape_coords(num,centerx,centery,radius,control):
 		n=num
 	angle_increment = (2*np.pi)/n
 	coords = collections.OrderedDict()
-	for bruh in range(0,n):
+	for zz in range(0,n):
 		x=centerx + (radius*np.cos(angle))
 		y=centery + (radius*np.sin(angle))
 		angle += angle_increment
-		coords[bruh]=(x,y)
+		coords[zz]=(x,y)
 	if control is not None:
 		coords[num-1]=(centerx,centery)
 	return coords
